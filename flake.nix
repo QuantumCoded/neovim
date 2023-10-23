@@ -20,6 +20,7 @@
         ;
 
       luaInputs = [
+        "barbar.lua"
         "coc.lua"
         "guess-indent.lua"
         "hybrid-line-nums.lua"

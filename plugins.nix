@@ -1,12 +1,12 @@
 { fetchFromGitHub
 , vimPlugins
 , vimUtils
-,
 }:
 let
   inherit (vimUtils) buildVimPlugin;
 in
 with vimPlugins; [
+  barbar-nvim
   coc-nvim
   coc-rust-analyzer
   lsp-zero-nvim
@@ -21,6 +21,8 @@ with vimPlugins; [
   toggleterm-nvim
   nvim-treesitter.withAllGrammars
   lualine-nvim
+  nvim-web-devicons
+  gitsigns-nvim
 
   (buildVimPlugin {
     pname = "nvim-tetris";
