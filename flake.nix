@@ -24,6 +24,7 @@
         "guess-indent.lua"
         "hybrid-line-nums.lua"
         "lspconfig.lua"
+        "lualine.lua"
         "toggleterm.lua"
       ];
 
