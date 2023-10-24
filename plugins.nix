@@ -28,7 +28,7 @@ with vimPlugins; [
     pname = "nvim-tetris";
     version = "2021-06-28";
     src = fetchFromGitHub {
-      owner = "alerc-gibson";
+      owner = "alec-gibson";
       repo = "nvim-tetris";
       rev = "d17c99fb527ada98ffb0212ffc87ccda6fd4f7d9";
       hash = "sha256-+69Fq5aMMzg9nV05rZxlLTFwQmDyN5/5HmuL2SGu9xQ=";
