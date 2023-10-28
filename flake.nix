@@ -47,8 +47,8 @@
 
       resolvePaths = root: paths: map (relpath: "${root}/${relpath}") paths;
 
-      sourcedLuaConfigs = map (path: "luafile ${path}") (resolvePaths "${neovimConfigs}/lua" luaInputs);
-      sourcedVimConfigs = map (path: "source ${path}") (resolvePaths "${neovimConfigs}/vim" vimInputs);
+      sourcedLuaConfigs = map (path: "luafile ${path}") (resolvePaths "${neovimConfigs}/nvim/lua" luaInputs);
+      sourcedVimConfigs = map (path: "source ${path}") (resolvePaths "${neovimConfigs}/nvim/vim" vimInputs);
       sourcedConfigs = sourcedVimConfigs ++ sourcedLuaConfigs;
       sourceString = concatStringsSep "\n" sourcedConfigs;
 
