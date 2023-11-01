@@ -27,10 +27,10 @@
         "lspconfig.lua"
         "lualine.lua"
         "toggleterm.lua"
+        "vim-code-dark.lua"
       ];
 
       vimInputs = [
-        "vim-code-dark.vim"
       ];
 
       system = "x86_64-linux";
