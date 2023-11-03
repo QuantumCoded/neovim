@@ -24,6 +24,7 @@
         "coc.lua"
         "guess-indent.lua"
         "hybrid-line-nums.lua"
+        "keymaps.lua"
         "lspconfig.lua"
         "lualine.lua"
         "nvim-tree.lua"
