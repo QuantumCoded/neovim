@@ -189,6 +189,12 @@ require("nvim-tree").setup {
     enable = true,
     update_root = true
   },
+  -- not sure if i will find this annoying
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    },
+  },
 }
 
 -- auto close hack
@@ -213,3 +219,4 @@ vim.api.nvim_create_autocmd("BufEnter", {
         end
     end
 })
+
