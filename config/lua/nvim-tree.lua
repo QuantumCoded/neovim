@@ -220,3 +220,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
     end
 })
 
+-- keybinds for using nvim-tree
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+
