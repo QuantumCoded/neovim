@@ -24,6 +24,8 @@ with vimPlugins; [
   lualine-lsp-progress
   nvim-web-devicons
   gitsigns-nvim
+  nvim-tree-lua
+
   (buildVimPlugin {
     pname = "lualine-time";
     version = "2023-04-28";

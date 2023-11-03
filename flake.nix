@@ -26,6 +26,7 @@
         "hybrid-line-nums.lua"
         "lspconfig.lua"
         "lualine.lua"
+        "nvim-tree.lua"
         "toggleterm.lua"
         "vim-code-dark.lua"
       ];
