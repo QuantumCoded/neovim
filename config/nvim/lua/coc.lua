@@ -162,6 +162,7 @@ vim.api.nvim_create_user_command("OR", "call CocActionAsync('runCommand', 'edito
 -- provide custom statusline: lightline.vim, vim-airline
 vim.opt.statusline:prepend("%{coc#status()}%{get(b:,'coc_current_function','')}")
 
+-- FIXME: since these are all <space> binds, <leader> interferes
 -- Mappings for CoCList
 -- code actions and coc stuff
 ---@diagnostic disable-next-line: redefined-local
@@ -183,4 +184,9 @@ keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
 -- Resume latest coc list
 keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
 
+--== END OF COC DEFAULTS ==--
+
+-- TODO: see if this can be turn into idomatic lua
+-- autocmd for restarting coc on direnv exports
+vim.cmd([[autocmd User DirenvLoaded :silent! CocRestart]])
 

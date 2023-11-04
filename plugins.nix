@@ -21,8 +21,21 @@ with vimPlugins; [
   toggleterm-nvim
   nvim-treesitter.withAllGrammars
   lualine-nvim
+  lualine-lsp-progress
   nvim-web-devicons
   gitsigns-nvim
+  nvim-tree-lua
+
+  (buildVimPlugin {
+    pname = "lualine-time";
+    version = "2023-04-28";
+    src = fetchFromGitHub {
+      owner = "archibate";
+      repo = "lualine-time";
+      rev = "71e368674ec59279e8429504074b15fecd758ea8";
+      hash = "sha256-5vZVku4btbwGaPPev+bkWG4R7hLavP5ixN4v/FyJb4c=";
+    };
+  })
 
   (buildVimPlugin {
     pname = "nvim-tetris";

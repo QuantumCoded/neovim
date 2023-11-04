@@ -4,6 +4,7 @@
 , libqalculate
 , nil
 , nodejs
+, rust-analyzer
 , rust-bin
 , tree-sitter
 }:
@@ -15,6 +16,7 @@
   libqalculate
   nil
   nodejs
+  rust-analyzer
   (rust-bin.stable.latest.default.override {
     extensions = [ "rust-src" ];
   })
