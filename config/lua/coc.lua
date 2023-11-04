@@ -185,3 +185,11 @@ keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
 keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
 
 
+
+-- autocmd for restarting coc on direnv exports
+vim.api.nvim_create_autocmd("DirenvLoaded", {
+    nested = true,
+    callback = function()
+        vim.cmd(":silent! CocRestart")
+    end
+})
