@@ -28,6 +28,8 @@ with vimPlugins; [
   plenary-nvim
   telescope-fzf-native-nvim
   telescope-nvim
+  project-nvim
+  telescope-project-nvim
 
   (buildVimPlugin {
     pname = "lualine-time";

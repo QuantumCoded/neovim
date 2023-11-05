@@ -28,6 +28,7 @@
         "lspconfig.lua"
         "lualine.lua"
         "nvim-tree.lua"
+        "project.lua"
         "telescope.lua"
         "toggleterm.lua"
         "vim-code-dark.lua"
