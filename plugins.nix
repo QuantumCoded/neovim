@@ -25,6 +25,9 @@ with vimPlugins; [
   nvim-web-devicons
   gitsigns-nvim
   nvim-tree-lua
+  plenary-nvim
+  telescope-fzf-native-nvim
+  telescope-nvim
 
   (buildVimPlugin {
     pname = "lualine-time";
