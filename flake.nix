@@ -22,6 +22,7 @@
       luaInputs = [
         "barbar.lua"
         "coc.lua"
+        "comment.lua"
         "guess-indent.lua"
         "hybrid-line-nums.lua"
         "keymaps.lua"
