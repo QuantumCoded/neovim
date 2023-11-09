@@ -5,6 +5,7 @@
 , libqalculate
 , nil
 , nodejs
+, nodePackages
 , ripgrep
 , rust-analyzer
 , rust-bin
@@ -19,6 +20,7 @@
   libqalculate
   nil
   nodejs
+  nodePackages.typescript-language-server
   ripgrep
   rust-analyzer
   (rust-bin.stable.latest.default.override {
