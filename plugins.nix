@@ -32,6 +32,17 @@ with vimPlugins; [
   telescope-project-nvim
 
   (buildVimPlugin {
+    pname = "quickmath-nvim";
+    version = "2023-03-12";
+    src = fetchFromGitHub {
+      owner = "jbyuki";
+      repo = "quickmath.nvim";
+      rev = "dcfc5450fa686714817a0d4767299f37f94bdb43";
+      hash = "sha256-lBQITqTIMAIp48Qq46dNyOaxzJKerO1FWMQZ8XvLq+Y=";
+    };
+  })
+
+  (buildVimPlugin {
     pname = "lualine-time";
     version = "2023-04-28";
     src = fetchFromGitHub {
