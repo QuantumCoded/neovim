@@ -1,6 +1,7 @@
 { fish
 , fzf
 , gcc
+, git
 , lazygit
 , libqalculate
 , nil
@@ -15,6 +16,7 @@
   fish
   fzf
   gcc
+  git
   lazygit
   libqalculate
   nil
