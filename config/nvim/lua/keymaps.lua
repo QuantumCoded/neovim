@@ -12,3 +12,6 @@ vim.keymap.set('n', '<leader>w', '<Cmd>w<CR>', { noremap = true, silent = true }
 -- quit current buffer
 vim.keymap.set('n', '<leader>q', '<Cmd>q<CR>', { noremap = true, silent = true })
 
+-- force quit current buffer
+vim.keymap.set('n', '<leader>Q', '<Cmd>q!<CR>', { noremap = true, silent = true })
+
