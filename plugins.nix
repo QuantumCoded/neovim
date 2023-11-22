@@ -9,6 +9,7 @@ with vimPlugins; [
   barbar-nvim
   coc-nvim
   coc-rust-analyzer
+  coc-tsserver
   lsp-zero-nvim
   nvim-cmp
   cmp-nvim-lsp
