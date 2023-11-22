@@ -20,12 +20,13 @@
         ;
 
       luaInputs = [
+        "keymaps.lua"
+
         "barbar.lua"
         "coc.lua"
         "comment.lua"
         "guess-indent.lua"
         "hybrid-line-nums.lua"
-        "keymaps.lua"
         "lspconfig.lua"
         "lualine.lua"
         "nvim-tree.lua"
