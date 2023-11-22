@@ -32,6 +32,7 @@
         "nvim-tree.lua"
         "project.lua"
         "telescope.lua"
+        "todo-comments.lua"
         "toggleterm.lua"
         "vim-code-dark.lua"
       ];

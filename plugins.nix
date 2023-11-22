@@ -30,6 +30,7 @@ with vimPlugins; [
   telescope-nvim
   project-nvim
   telescope-project-nvim
+  todo-comments-nvim
 
   (buildVimPlugin {
     pname = "quickmath-nvim";
