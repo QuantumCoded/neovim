@@ -30,7 +30,6 @@
         "lspconfig.lua"
         "lualine.lua"
         "nvim-tree.lua"
-        "project.lua"
         "telescope.lua"
         "todo-comments.lua"
         "toggleterm.lua"

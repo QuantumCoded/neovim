@@ -18,9 +18,6 @@ telescope.setup {
 -- load_extension, somewhere after setup function:
 telescope.load_extension('fzf')
 
--- Load the projects extension for telescope
-telescope.load_extension('projects')
-
 -- Configure telescope builtin keymaps
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})

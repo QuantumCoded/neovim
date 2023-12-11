@@ -29,8 +29,6 @@ with vimPlugins; [
   plenary-nvim
   telescope-fzf-native-nvim
   telescope-nvim
-  project-nvim
-  telescope-project-nvim
   todo-comments-nvim
 
   (buildVimPlugin {
