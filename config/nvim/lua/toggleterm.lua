@@ -24,7 +24,6 @@ require("toggleterm").setup({
 })
 
 local floating_term = Terminal:new({
-	-- FIXME: this needs to be set to a nix store path
 	cmd = "fish",
 	dir = "git_dir",
 	direction = "float",
@@ -47,7 +46,6 @@ local floating_term = Terminal:new({
 })
 
 local qalculate = Terminal:new({
-	-- FIXME: this needs to be set to a nix store path
 	cmd = "qalc",
 	dir = "git_dir",
 	direction = "float",
