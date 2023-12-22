@@ -30,6 +30,7 @@ with vimPlugins; [
   telescope-fzf-native-nvim
   telescope-nvim
   todo-comments-nvim
+  trouble-nvim
 
   (buildVimPlugin {
     pname = "quickmath-nvim";

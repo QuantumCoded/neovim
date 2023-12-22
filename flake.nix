@@ -33,6 +33,7 @@
         "telescope.lua"
         "todo-comments.lua"
         "toggleterm.lua"
+        "trouble.lua"
         "vim-code-dark.lua"
       ];
 
