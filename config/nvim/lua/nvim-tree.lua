@@ -105,5 +105,17 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 -- keybinds for using nvim-tree
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-
+vim.keymap.set(
+  'n', '<leader>e',
+  function()
+    if
+      require('nvim-tree.view').is_visible()
+      and not vim.api.nvim_buf_get_name(0):match("NvimTree_%d+$")
+    then
+      vim.cmd(":NvimTreeFocus")
+    else
+      vim.cmd(":NvimTreeToggle")
+    end
+  end,
+  { noremap = true, silent = true }
+)
