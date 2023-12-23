@@ -187,8 +187,14 @@ keyset("n", "<leader><space>p", ":<C-u>CocListResume<cr>", opts)
 
 --== END OF COC DEFAULTS ==--
 
+-- Use `[s` and `]s` to navigate symbol references
+keyset("n", "[s", ":CocCommand document.jumpToPrevSymbol<cr>", {silent = true})
+keyset("n", "]s", ":CocCommand document.jumpToNextSymbol<cr>", {silent = true})
+
 -- TODO: see if this can be turn into idomatic lua
+
 -- FIXME: this was causing weird errors when switching buffers too quickly
 -- autocmd for restarting coc on direnv exports
+
 -- vim.cmd([[autocmd User DirenvLoaded :silent! CocRestart]])
 
