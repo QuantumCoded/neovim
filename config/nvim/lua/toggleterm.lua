@@ -3,7 +3,7 @@ local Terminal = require("toggleterm.terminal").Terminal
 require("toggleterm").setup({
 	vim.api.nvim_set_keymap(
 		"n",
-		"<leader>t",
+		"<leader><CR>",
 		"<cmd>lua floating_term_toggle()<CR>",
 		{ noremap = true, silent = true }
 	),
@@ -106,4 +106,3 @@ return {
 	qalculate_toggle = qalculate_toggle,
 	lazygit_toggle = lazygit_toggle,
 }
-
