@@ -65,4 +65,14 @@ vim.keymap.set("n", "<leader>xl", function() trouble.toggle("loclist") end)
 vim.keymap.set("n", "gR", function() trouble.toggle("lsp_references") end)
 
 -- Additional keymaps
-vim.keymap.set('n', '<leader>t', "<Cmd>TodoTrouble<CR>", {})
+vim.keymap.set(
+  'n', '<leader>t',
+  function()
+    if vim.api.nvim_buf_get_name(0):match("Trouble$") then
+      vim.cmd("TroubleClose")
+    else
+      vim.cmd("TodoTrouble")
+    end
+  end,
+  { noremap = true, silent = true }
+)
