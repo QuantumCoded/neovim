@@ -1,6 +1,7 @@
 local lspconfig = require('lspconfig')
 
-lspconfig.rust_analyzer.setup {}
+lspconfig.clangd.setup {}
 lspconfig.nil_ls.setup {}
-lspconfig.tsserver.setup{}
+lspconfig.rust_analyzer.setup {}
+lspconfig.tsserver.setup {}
 
