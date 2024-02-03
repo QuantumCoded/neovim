@@ -2,22 +2,13 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     rust-overlay.url = "github:oxalica/rust-overlay";
+    systems.url = "github:nix-systems/default";
   };
 
   outputs = inputs:
     with inputs;
     let
-      inherit (lib)
-        concatStringsSep
-        ;
-
-      inherit (pkgs)
-        callPackage
-        lib
-        neovim-unwrapped
-        wrapNeovim
-        writeShellApplication
-        ;
+      eachSystem = nixpkgs.lib.genAttrs (import systems);
 
       luaInputs = [
         "keymaps.lua"
@@ -39,41 +30,55 @@
 
       vimInputs = [
       ];
-
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [
-          rust-overlay.overlays.default
-        ];
-      };
-
-      neovimConfigs = callPackage ./config { };
-      neovimPlugins = callPackage ./plugins.nix { };
-      neovimRuntime = callPackage ./runtime.nix { };
-
-      resolvePaths = root: paths: map (relpath: "${root}/${relpath}") paths;
-
-      sourcedLuaConfigs = map (path: "luafile ${path}") (resolvePaths "${neovimConfigs}/nvim/lua" luaInputs);
-      sourcedVimConfigs = map (path: "source ${path}") (resolvePaths "${neovimConfigs}/nvim/vim" vimInputs);
-      sourcedConfigs = sourcedVimConfigs ++ sourcedLuaConfigs;
-      sourceString = concatStringsSep "\n" sourcedConfigs;
-
-      neovimWrapped = wrapNeovim neovim-unwrapped {
-        configure = {
-          customRC = sourceString;
-          packages.all.start = neovimPlugins;
-        };
-      };
     in
     {
-      packages.${system}.default = writeShellApplication {
-        name = "nvim";
-        runtimeInputs = neovimRuntime;
-        text = ''
-          ${neovimWrapped}/bin/nvim "$@"
-        '';
-      };
+      packages = eachSystem (system: 
+        let
+          inherit (pkgs)
+            callPackage
+            neovim-unwrapped
+            wrapNeovim
+            writeShellApplication
+            ;
+
+          inherit (pkgs.lib)
+            concatStringsSep
+            ;
+
+          pkgs = import nixpkgs {
+            inherit system; 
+            overlays = [
+              rust-overlay.overlays.default
+            ];
+          };
+
+          neovimConfigs = callPackage ./config { };
+          neovimPlugins = callPackage ./plugins.nix { };
+          neovimRuntime = callPackage ./runtime.nix { };
+
+          resolvePaths = root: paths: map (relpath: "${root}/${relpath}") paths;
+
+          sourcedLuaConfigs = map (path: "luafile ${path}") (resolvePaths "${neovimConfigs}/nvim/lua" luaInputs);
+          sourcedVimConfigs = map (path: "source ${path}") (resolvePaths "${neovimConfigs}/nvim/vim" vimInputs);
+          sourcedConfigs = sourcedVimConfigs ++ sourcedLuaConfigs;
+          sourceString = concatStringsSep "\n" sourcedConfigs;
+
+          neovimWrapped = wrapNeovim neovim-unwrapped {
+            configure = {
+              customRC = sourceString;
+              packages.all.start = neovimPlugins;
+            };
+          };
+        in
+        {
+        default = writeShellApplication {
+          name = "nvim";
+          runtimeInputs = neovimRuntime;
+          text = ''
+            ${neovimWrapped}/bin/nvim "$@"
+          '';
+        };
+      });
     };
 }
 
