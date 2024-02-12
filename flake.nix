@@ -27,6 +27,7 @@
         "comment.lua"
         "guess-indent.lua"
         "hybrid-line-nums.lua"
+        "leetcode.lua"
         "lspconfig.lua"
         "lualine.lua"
         "nvim-tree.lua"

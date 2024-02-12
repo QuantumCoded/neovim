@@ -14,6 +14,8 @@ with vimPlugins; [
   nvim-cmp
   cmp-nvim-lsp
   nvim-lspconfig
+  nui-nvim
+  nvim-notify
   comment-nvim
   guess-indent-nvim
   direnv-vim
@@ -62,6 +64,17 @@ with vimPlugins; [
       repo = "nvim-tetris";
       rev = "d17c99fb527ada98ffb0212ffc87ccda6fd4f7d9";
       hash = "sha256-+69Fq5aMMzg9nV05rZxlLTFwQmDyN5/5HmuL2SGu9xQ=";
+    };
+  })
+
+  (buildVimPlugin {
+    pname = "leetcode-nvim";
+    version = "2024-01-28";
+    src = fetchFromGitHub {
+      owner = "kawre";
+      repo = "leetcode.nvim";
+      rev = "f114abc5dd7b9320a1b82eae88fdc80995296b6d";
+      hash = "sha256-yaK3xESY3+rtExONEcsOQTQH9y4wstjkY5yR/kIhClc=";
     };
   })
 ]
