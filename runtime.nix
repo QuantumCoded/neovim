@@ -1,4 +1,5 @@
-{ fish
+{ clang-tools
+, fish
 , fzf
 , gcc
 , git
@@ -12,8 +13,8 @@
 , rust-bin
 , tree-sitter
 }:
-
 [
+  clang-tools
   fish
   fzf
   gcc
@@ -30,4 +31,3 @@
   })
   tree-sitter
 ]
-
