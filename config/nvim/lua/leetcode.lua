@@ -3,7 +3,7 @@ require('leetcode').setup {
     arg = "leetcode.nvim",
 
     ---@type lc.lang
-    lang = "py",
+    lang = "python3",
 
     cn = { -- leetcode.cn
         enabled = false, ---@type boolean
