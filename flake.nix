@@ -38,12 +38,16 @@
           inherit (pkgs)
             callPackage
             neovim-unwrapped
-            wrapNeovim
+            wrapNeovimUnstable
             writeShellApplication
             ;
 
           inherit (pkgs.lib)
             concatStringsSep
+            ;
+
+          inherit (pkgs.neovimUtils)
+            makeNeovimConfig
             ;
 
           pkgs = import nixpkgs {
@@ -64,12 +68,12 @@
           sourcedConfigs = sourcedVimConfigs ++ sourcedLuaConfigs;
           sourceString = concatStringsSep "\n" sourcedConfigs;
 
-          neovimWrapped = wrapNeovim neovim-unwrapped {
-            configure = {
-              customRC = sourceString;
-              packages.all.start = neovimPlugins;
-            };
+          neovimConfig = makeNeovimConfig {
+            customRC = sourceString;
+            plugins = map (plugin: { inherit plugin; }) neovimPlugins;
           };
+
+          neovimWrapped = wrapNeovimUnstable neovim-unwrapped neovimConfig;
         in
         {
         default = writeShellApplication {
