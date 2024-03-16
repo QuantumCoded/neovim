@@ -15,7 +15,6 @@ with vimPlugins; [
   cmp-nvim-lsp
   nvim-lspconfig
   nui-nvim
-  nvim-notify
   comment-nvim
   guess-indent-nvim
   direnv-vim
