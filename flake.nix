@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    rust-overlay.url = "github:oxalica/rust-overlay";
     systems.url = "github:nix-systems/default";
   };
 
@@ -14,7 +13,7 @@
         "keymaps.lua"
 
         "barbar.lua"
-        "coc.lua"
+        "cmp.lua"
         "comment.lua"
         "guess-indent.lua"
         "hybrid-line-nums.lua"
@@ -50,12 +49,7 @@
             makeNeovimConfig
             ;
 
-          pkgs = import nixpkgs {
-            inherit system; 
-            overlays = [
-              rust-overlay.overlays.default
-            ];
-          };
+          pkgs = import nixpkgs { inherit system; };
 
           neovimConfigs = callPackage ./config { };
           neovimPlugins = callPackage ./plugins.nix { };

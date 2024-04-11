@@ -12,7 +12,6 @@
 , python3Packages
 , ripgrep
 , rust-analyzer
-, rust-bin
 , tree-sitter
 }:
 [
@@ -30,8 +29,5 @@
   python3Packages.jedi-language-server
   ripgrep
   rust-analyzer
-  (rust-bin.stable.latest.default.override {
-    extensions = [ "rust-src" ];
-  })
   tree-sitter
 ]
