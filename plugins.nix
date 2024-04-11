@@ -10,6 +10,7 @@ with vimPlugins; [
   coc-nvim
   coc-rust-analyzer
   coc-tsserver
+  coc-go
   lsp-zero-nvim
   nvim-cmp
   cmp-nvim-lsp

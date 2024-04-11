@@ -3,6 +3,7 @@
 , fzf
 , gcc
 , git
+, gopls
 , lazygit
 , libqalculate
 , nil
@@ -20,6 +21,7 @@
   fzf
   gcc
   git
+  gopls
   lazygit
   libqalculate
   nil
