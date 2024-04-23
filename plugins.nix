@@ -7,14 +7,15 @@ let
 in
 with vimPlugins; [
   barbar-nvim
-  coc-nvim
-  coc-rust-analyzer
-  coc-tsserver
-  coc-go
-  lsp-zero-nvim
-  nvim-cmp
-  cmp-nvim-lsp
+
+  # CMP
   nvim-lspconfig
+  cmp-nvim-lsp
+  cmp-buffer
+  cmp-path
+  cmp-cmdline
+  nvim-cmp
+
   nui-nvim
   comment-nvim
   guess-indent-nvim

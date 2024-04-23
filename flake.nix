@@ -13,7 +13,7 @@
         "keymaps.lua"
 
         "barbar.lua"
-        "coc.lua"
+        "cmp.lua"
         "comment.lua"
         "guess-indent.lua"
         "hybrid-line-nums.lua"
