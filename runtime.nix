@@ -6,6 +6,7 @@
 , gopls
 , lazygit
 , libqalculate
+, lua-language-server
 , nil
 , nodejs
 , nodePackages
@@ -23,6 +24,7 @@
   gopls
   lazygit
   libqalculate
+  lua-language-server
   nil
   nodejs
   nodePackages.typescript-language-server
