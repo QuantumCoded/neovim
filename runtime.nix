@@ -6,6 +6,7 @@
 , gopls
 , lazygit
 , libqalculate
+, lua-language-server
 , nil
 , nodejs
 , nodePackages
@@ -23,11 +24,12 @@
   gopls
   lazygit
   libqalculate
+  lua-language-server
   nil
   nodejs
   nodePackages.typescript-language-server
   python3Packages.jedi-language-server
   ripgrep
-  rust-analyzer
+  # rust-analyzer
   tree-sitter
 ]
