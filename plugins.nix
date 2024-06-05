@@ -14,9 +14,7 @@ with vimPlugins; [
   cmp-buffer
   cmp-path
   cmp-cmdline
-  cmp-vsnip
   nvim-cmp
-  vim-vsnip
 
   nui-nvim
   comment-nvim
