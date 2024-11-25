@@ -37,3 +37,4 @@ lspconfig.lua_ls.setup {
 lspconfig.nil_ls.setup {}
 lspconfig.rust_analyzer.setup {}
 lspconfig.tsserver.setup {}
+lspconfig.wgsl_analyzer.setup {}

@@ -23,6 +23,7 @@ with vimPlugins; [
   vim-nix
   vim-code-dark
   toggleterm-nvim
+  nvim-treesitter-parsers.wgsl
   nvim-treesitter.withAllGrammars
   lualine-nvim
   lualine-lsp-progress

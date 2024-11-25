@@ -26,6 +26,7 @@
         "toggleterm.lua"
         "trouble.lua"
         "vim-code-dark.lua"
+        "wgsl-tree-sitter.lua"
       ];
 
       vimInputs = [
@@ -70,14 +71,14 @@
           neovimWrapped = wrapNeovimUnstable neovim-unwrapped neovimConfig;
         in
         {
-        default = writeShellApplication {
-          name = "nvim";
-          runtimeInputs = neovimRuntime;
-          text = ''
-            ${neovimWrapped}/bin/nvim "$@"
-          '';
-        };
-      });
+          default = writeShellApplication {
+            name = "nvim";
+            runtimeInputs = neovimRuntime;
+            text = ''
+              ${neovimWrapped}/bin/nvim "$@"
+            '';
+          };
+        });
     };
 }
 
